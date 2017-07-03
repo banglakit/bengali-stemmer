@@ -1,4 +1,7 @@
 # coding: utf-8
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def _stem_verb_step_1(word: str) -> str:
@@ -20,7 +23,7 @@ def _stem_verb_step_3(word: str) -> str:
 
 
 def _harmonize_verb(word: str) -> str:
-    # Harmonizing has not been implemented completely.
+    logger.warning('Harmonizing has not been implemented completely.')
     if word.endswith('য়ে'):
         return word[:-3] + 'ে'
     if word.endswith('ই'):
