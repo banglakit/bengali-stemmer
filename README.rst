@@ -9,6 +9,23 @@ A stemmer is a light-weight approach to find root words, avoiding expensive morp
 
 Work is in progress with the algorithm of the stemmer, the implementations may vary significantly from version to version.
 
+
+----------
+Algorithms
+----------
+
+Rafi Kamal's Stemmer
+~~~~~~~~~~~~~~~~~~~~
+
+Originally Developed by `Rafi Kamal`_. Ported to Python.::
+
+  from bengali_stemmer.rafikamal2014 import RafiStemmer
+  stemmer = RafiStemmer()
+  stemmer.stem_word('বাংলায়')
+
+.. _`Rafi Kamal`: https://github.com/rafi-kamal/Bangla-Stemmer
+
+
 ----------
 References
 ----------
