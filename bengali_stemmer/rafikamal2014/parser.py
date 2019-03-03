@@ -125,10 +125,8 @@ class RafiStemmer:
     def stem_word(self, word: str):
         for i, group in enumerate(self.groups):
             for j, replace_prefix in enumerate(group):
-                # TODO: cache the compilation
-                matcher = re.compile(r'.*' + replace_prefix + r'$')
 
-                if not matcher.fullmatch(word):
+                if not word.endswith(replace_prefix):
                     continue
 
                 index = len(word) - len(replace_prefix)
