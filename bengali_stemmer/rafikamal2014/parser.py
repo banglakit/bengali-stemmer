@@ -110,21 +110,21 @@ class RafiStemmer:
     def stem_with_replace_rule(self, index, replace_prefix, word):
         replace_suffix = self.replace_rules[replace_prefix]
         word_as_list = list(word)
-        k, l = index, 0
+        word_char_idx, current = index, 0
 
-        while k < index + len(replace_suffix):
+        while word_char_idx < index + len(replace_suffix):
 
-            if replace_suffix[l] != '.':
-                word_as_list[k] = replace_suffix[l]
+            if replace_suffix[current] != '.':
+                word_as_list[word_char_idx] = replace_suffix[current]
 
-            k += 1
-            l += 1
+            word_char_idx += 1
+            current += 1
 
-        return "".join(word_as_list[0:k])
+        return "".join(word_as_list[0:word_char_idx])
 
     def stem_word(self, word: str):
-        for i, group in enumerate(self.groups):
-            for j, replace_prefix in enumerate(group):
+        for group in self.groups:
+            for replace_prefix in group:
 
                 if not word.endswith(replace_prefix):
                     continue
@@ -132,7 +132,7 @@ class RafiStemmer:
                 index = len(word) - len(replace_prefix)
 
                 if replace_prefix in self.replace_rules:
-                    word = self.stem_with_replace_rule(index, replace_prefix, word)
+                    word = self.stem_with_replace_rule(index, replace_prefix, word)  # noqa: E501
 
                 elif self.check(word[0:index]):
                     word = word[0:index]

@@ -1,1 +1,1 @@
-from .verb import stem_verb
+from .verb import stem_verb  # noqa: F401

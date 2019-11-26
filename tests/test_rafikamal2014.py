@@ -1,4 +1,5 @@
-from bengali_stemmer.rafikamal2014.parser import RafiStemmerRuleParser, RafiStemmer
+from bengali_stemmer.rafikamal2014.parser import RafiStemmerRuleParser
+from bengali_stemmer.rafikamal2014.parser import RafiStemmer
 
 DUMMY_RULES = """{
 \tই\t\t\t# এটাই, সেটাই
