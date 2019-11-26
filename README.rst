@@ -2,8 +2,8 @@
 BanglaKit Bengali Stemmer
 =========================
 
-.. image:: https://travis-ci.org/banglakit/bengali-stemmer.svg?branch=dev
-    :target: https://travis-ci.org/banglakit/bengali-stemmer
+.. image:: https://github.com/banglakit/bengali-stemmer/workflows/Bengali%20Stemmer/badge.svg
+    :target: https://github.com/banglakit/bengali-stemmer/actions
 
 A stemmer is a light-weight approach to find root words, avoiding expensive morphological analysis.
 The *BanglaKit Stemmer* implements a stepwise approach to removing inflections from Bengali Words [1].
